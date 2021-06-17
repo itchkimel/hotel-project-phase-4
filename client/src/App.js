@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
 import './App.css';
+import HotelContainer from "./components/HotelContainer";
+import NavBar from "./components/NavBar";
+import AccountLogin from "./components/AccountLogin";
+import Reservations from "./components/Reservations";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  
+  render (){    
+    return (
+      <div>
+        <NavBar />
+        <AccountLogin />
+        <Reservations />
+        Fullstack Hotels under construction...
+        <HotelContainer />
+      </div>
+    )
+  }
 }
 
-export default App;
+
