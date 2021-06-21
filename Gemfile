@@ -49,6 +49,8 @@ group :test do
   gem 'shoulda-matchers', '~> 4.0'
 end
 
+gem 'jwt', '~> 1.5', '>= 1.5.4'
+
 gem "active_model_serializers", "~> 0.10.12"
 
 gem 'activerecord-reset-pk-sequence'
