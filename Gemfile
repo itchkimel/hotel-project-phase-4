@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.6.3"
+ruby "2.7.3"
 # ruby "2.6.1" just incaseeeeee
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -48,6 +48,8 @@ group :test do
   gem 'rspec-json_expectations'
   gem 'shoulda-matchers', '~> 4.0'
 end
+
+gem 'jwt', '~> 1.5', '>= 1.5.4'
 
 gem "active_model_serializers", "~> 0.10.12"
 
