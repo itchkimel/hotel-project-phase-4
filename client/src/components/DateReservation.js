@@ -4,7 +4,7 @@ class DateReservation extends Component {
     render() {
         return (
             <div>
-                User will reserve date for room here
+                <button>Reserve This Room!</button>
             </div>
         );
     }
