@@ -6,7 +6,8 @@ export default class HotelContainer extends Component {
     return (
       <div>
         This is the Hotel Container
-        <HotelCard />
+        {this.props.hotels.map(hotel => <HotelCard hotels={hotel} />)}
+        {/* <HotelCard /> */}
       </div>
     );
   }
