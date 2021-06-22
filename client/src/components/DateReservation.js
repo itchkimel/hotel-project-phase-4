@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
+
 class DateReservation extends Component {
     render() {
         return (
-            <div>
-                <button>Reserve This Room!</button>
+            <div className="room-reservation">
+                date picker going here...
             </div>
         );
     }
