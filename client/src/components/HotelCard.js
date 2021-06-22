@@ -30,7 +30,7 @@ class HotelCard extends Component {
                 <h3>Rating: {this.props.hotels.rating} ⭐️'s</h3>
                 <button onClick={this.handleRooms}>{this.state.roomsForm ? "Cancel" : "Book A Room!"}</button>
                 {this.state.roomsForm ? this.props.hotels.rooms.map(room => 
-                <RoomCard key={room.id} rooms={room} />) : null} 
+                <RoomCard key={room.id} rooms={room} addToCart={this.props.addToCart} />) : null} 
                 {/* <RoomCard /> */}
             </div>
         );

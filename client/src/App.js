@@ -5,12 +5,15 @@ import HotelContainer from "./components/HotelContainer";
 import NavBar from "./components/NavBar";
 import AccountLogin from "./components/AccountLogin";
 import Reservations from "./components/Reservations";
+import BookingsSummary from "./components/BookingsSummary";
 
 export default class App extends Component {
 
   state = {
     hotels: [],
-    currentUser: ""
+    currentUser: "",
+    resvItems: []
+
   }
 
 
@@ -27,10 +30,14 @@ export default class App extends Component {
       // this.props.history.push('/home')
     })
   }
+
+  addToCart = (resvObj) => {
+    this.setState({resvItems: [...this.state.resvItems, resvObj]})
+  }
   
   render (){    
 
-    // console.log(this.state.hotels)
+    console.log(this.state.resvItems)
 
     return (
       <Router>
@@ -43,7 +50,10 @@ export default class App extends Component {
             <Reservations />
           </Route>
           <Route exact path="/hotels">
-            <HotelContainer hotels={this.state.hotels} />
+            <HotelContainer hotels={this.state.hotels} addToCart={this.addToCart} />
+          </Route>
+          <Route exact path="/cart">
+            <BookingsSummary resvItems={this.state.resvItems} />
           </Route>
         </Switch>
       </Router>
