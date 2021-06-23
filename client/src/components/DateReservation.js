@@ -3,7 +3,7 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { ModalBody } from 'react-bootstrap';
-import BookingsSummary from './BookingsSummary';
+
 
 
 class DateReservation extends Component {

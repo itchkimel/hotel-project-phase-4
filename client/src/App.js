@@ -5,7 +5,7 @@ import HotelContainer from "./components/HotelContainer";
 import NavBar from "./components/NavBar";
 import AccountLogin from "./components/AccountLogin";
 import Reservations from "./components/Reservations";
-import BookingsSummary from "./components/BookingsSummary";
+import Cart from "./components/Cart";
 
 export default class App extends Component {
 
@@ -21,6 +21,7 @@ export default class App extends Component {
     fetch('http://127.0.0.1:3000/hotels')
     .then(res => res.json())
     .then(hotelsArr => this.setState({hotels: hotelsArr}))
+    console.log("mounted")
   }
 
   handleLogin = currentUser => {
@@ -46,15 +47,16 @@ export default class App extends Component {
           <Route exact path="/login">
             <AccountLogin />
           </Route>
+          <Route exact path="/cart">
+            <Cart resvItems={this.state.resvItems} hotels={this.state.hotels} />
+          </Route>
           <Route exact path="/reservations">
             <Reservations />
           </Route>
           <Route exact path="/hotels">
             <HotelContainer hotels={this.state.hotels} addToCart={this.addToCart} />
           </Route>
-          <Route exact path="/cart">
-            <BookingsSummary resvItems={this.state.resvItems} />
-          </Route>
+          
         </Switch>
       </Router>
     )
