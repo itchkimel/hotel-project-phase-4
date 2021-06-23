@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { Form, Button, Col } from "react-bootstrap";
 
 
-class AccountLogin extends Component {
+class Signup extends Component {
     state = {
         username: "",
         password: "",
-        age: 23
-    }
+        age: ""
+      }
     
       handleChange = e => {
         this.setState({ [e.target.name]: e.target.value })
@@ -16,25 +15,23 @@ class AccountLogin extends Component {
       handleSubmit = e => {
         e.preventDefault()
         // TODO: make a fetch request to sign up the current user
-        fetch("http://localhost:3000/login", {
+        fetch("http://localhost:3000/guests", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify(this.state)
         })
-          .then(res => res.json())
+          .then(r => r.json())
           // then set that user in state in our App component
-          .then((res) => {
-            if (res.error) {
-              alert (res.error)
-              window.location.href = "http://localhost:4000/signup";
-            } else {
-              this.props.loggedIn(res)
-              // window.location.href = "http://localhost:4000/reservations";
-            }
-          })
-
+          .then(console.log)
+        //   .then(data => {
+        //     const { guest, token } = data
+    
+        //     this.props.handleLogin(guest)
+        //     // also save the id to localStorage
+        //     localStorage.token = token
+        //   })
       }
     
       render() {
@@ -42,7 +39,7 @@ class AccountLogin extends Component {
     
         return (
           <form onSubmit={this.handleSubmit}>
-            <h1>Login</h1>
+            <h1>Signup</h1>
     
             <label>Username</label>
             <input
@@ -61,11 +58,20 @@ class AccountLogin extends Component {
               value={password}
               onChange={this.handleChange}
             />
+
+            <label>Age</label>
+            <input
+              type="age"
+              name="age"
+            //   autoComplete="age"
+              value={age}
+              onChange={this.handleChange}
+            />
     
-            <input type="submit" value="Login" />
+            <input type="submit" value="Signup" />
           </form>
         )
       }
 }
 
-export default AccountLogin;
+export default Signup;

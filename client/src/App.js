@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import AccountLogin from "./components/AccountLogin";
 import Reservations from "./components/Reservations";
 import Cart from "./components/Cart";
+import Signup from "./components/Signup";
 
 export default class App extends Component {
 
@@ -36,23 +37,58 @@ export default class App extends Component {
   addToCart = (resvObj) => {
     this.setState({resvItems: [...this.state.resvItems, resvObj]})
   }
+
+  loggedIn = (user) => {
+    // debugger
+    this.setState({
+      currentUser: user
+    })
+  }
+
+  handleResvPost = () => {
+    this.state.resvItems.map(resvItem => {
+    let newResv = {
+        date_start: resvItem.startDate,
+        date_end: resvItem.endDate,
+        room_id: resvItem.room.id,
+        guest_id: 1
+    }
+
+    fetch("http://localhost:3000/reservations", {
+      method: "POST",
+      headers: {
+        "Content-Type" : "application/json",
+      },
+      body: JSON.stringify(newResv)
+    })
+    .then(res => res.json())
+    .then(res => this.setState({
+      userResv: [...this.state.userResv, res],
+      resvItems: []
+    })
+    )
+  
+    })}
   
   render (){    
 
-    console.log(this.state.resvItems)
+    // console.log(this.state.resvItems)
 
     return (
       <Router>
         <NavBar />
         <Switch>
           <Route exact path="/login">
-            <AccountLogin />
+            <AccountLogin loggedIn={this.loggedIn} />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
           <Route exact path="/cart">
-            <Cart resvItems={this.state.resvItems} hotels={this.state.hotels} />
+            <Cart resvItems={this.state.resvItems} hotels={this.state.hotels} handleResvPost={this.handleResvPost} />
           </Route>
           <Route exact path="/reservations">
-            <Reservations />
+            <Reservations currentUser={this.state.currentUser} />
           </Route>
           <Route exact path="/hotels">
             <HotelContainer hotels={this.state.hotels} addToCart={this.addToCart} />

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import ResvCard from './ResvCard';
 
 class Reservations extends Component {
+
+
     render() {
+        console.log(this.props)
         return (
             <div>
-                User's reservations shown here (conditional rendering?)
+               {this.props.currentUser.reservations.map(resv => <ResvCard currentUser={this.props.currentUser} resv={resv}/>)}
             </div>
         );
     }
