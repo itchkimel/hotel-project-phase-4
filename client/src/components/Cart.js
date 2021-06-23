@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CartCard from './CartCard'
 
 class Cart extends Component {
     render() {
@@ -10,6 +11,8 @@ class Cart extends Component {
                 {/* <h5>{this.props.guestRes.startDate._d}</h5>
                 <h5>{this.props.guestRes.endDate._d}</h5>
                 <h5>{this.props.guestRes.room.price}</h5> */}
+
+                {this.props.resvItems.map(resv => <CartCard resvItems={resv} />)}
 
             </div>
         );

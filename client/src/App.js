@@ -12,7 +12,8 @@ export default class App extends Component {
   state = {
     hotels: [],
     currentUser: "",
-    resvItems: []
+    resvItems: [],
+    userResv: []
 
   }
 

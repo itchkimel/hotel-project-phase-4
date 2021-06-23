@@ -30,3 +30,8 @@ form img {
   width: 150px;
 }
 
+div.cart img {
+  height: 200;
+  width: 200;
+}
+

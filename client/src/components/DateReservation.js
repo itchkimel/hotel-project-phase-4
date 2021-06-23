@@ -28,8 +28,8 @@ class DateReservation extends Component {
     //    this.setState({resMade: true})
         
     let guestReservation = {
-            startDate: this.state.startDate._d,
-            endDate: this.state.endDate._d,
+            startDate: this.state.startDate._d.toString().slice(0, 15),
+            endDate: this.state.endDate._d.toString().slice(0, 15),
             guestId: 1,
             room: this.props.rooms
         }

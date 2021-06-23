@@ -8,7 +8,9 @@ class NavBar extends Component {
         return (
             <div>
                 
-                <Link to="/cart"  >Go To Cart</Link>
+                <Link to="/cart"  >Cart</Link>
+                <br></br>
+                <Link to="/hotels"  >Hotels</Link>
                 
                 
             </div>
