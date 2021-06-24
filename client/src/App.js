@@ -7,6 +7,7 @@ import AccountLogin from "./components/AccountLogin";
 import Reservations from "./components/Reservations";
 import Cart from "./components/Cart";
 import Signup from "./components/Signup";
+import './custom-theme.scss'
 
 export default class App extends Component {
 

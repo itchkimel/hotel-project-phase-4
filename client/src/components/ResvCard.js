@@ -12,7 +12,7 @@ class ResvCard extends Component {
         console.log(beef[0])
         console.log(beef1)
         return (
-            <div className="cart">
+            <div className="user-resv">
                 <h5>Hotel: {beef[0].name}</h5>
                 <h5>Room: {beef1[0].room_type}</h5>
                 <img alt='room_image' src={beef1[0].image}/>
