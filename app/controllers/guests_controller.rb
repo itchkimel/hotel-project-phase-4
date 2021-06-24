@@ -16,10 +16,14 @@ class GuestsController < ApplicationController
     #     render json: guests
     # end
 
-    # def show
-    #     guest = Guest.find_by(id: params[:id])
-    #     render json: guest
-    # end
+    def show
+        guest = Guest.find_by(id: params[:id])
+        if guest
+            render json: guest
+        else
+        render json: {error: "Guest not found"}, status: 404
+        end
+    end
 
     # def create
     #     guest = Guest.new(guest_params)
@@ -52,6 +56,22 @@ class GuestsController < ApplicationController
     #     render json: {error: guest.errors.full_messages}, status: 404
     #     end
     # end
+    def login
+        # find the user by their username
+        guest = Guest.find_by(username: params[:username])
+    
+        # if the user exists and their password matches, log them in
+        if guest 
+            # && guest.authenticate(params[:password])
+          # save user_id in session so we can use it in future requests
+        #   session[:user_id] = user.id
+          # return the user in the response
+          render json: guest
+        else
+          # for invalid username/password combos, send error messages to the front end
+          render json: { error: "Invalid username or password" }, status: :unauthorized
+        end
+    end
     
     private
 

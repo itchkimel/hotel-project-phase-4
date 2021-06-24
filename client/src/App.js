@@ -88,7 +88,7 @@ export default class App extends Component {
             <Cart resvItems={this.state.resvItems} hotels={this.state.hotels} handleResvPost={this.handleResvPost} />
           </Route>
           <Route exact path="/reservations">
-            <Reservations currentUser={this.state.currentUser} />
+            <Reservations currentUser={this.state.currentUser} hotels={this.state.hotels} />
           </Route>
           <Route exact path="/hotels">
             <HotelContainer hotels={this.state.hotels} addToCart={this.addToCart} />

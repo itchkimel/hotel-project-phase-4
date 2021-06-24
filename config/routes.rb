@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   
+  post "/login", to: "guests#login"
   resources :reservations
   resources :rooms
   resources :hotels
-  resources :guests, only: [:create]
+  resources :guests, only: [:create, :show]
+  
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
