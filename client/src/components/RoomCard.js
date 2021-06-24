@@ -20,7 +20,7 @@ class RoomCard extends Component {
                 <h4>{this.props.rooms.room_type}</h4>
                 <img alt="room" src={this.props.rooms.image}></img>
                 <h4>Price: ${this.props.rooms.price} - Per Night</h4>
-                <button onClick={this.handleReservation}>Reserve This Room!</button>
+                <button class="btn btn-primary mr-1" onClick={this.handleReservation}>{this.state.reservation ? "Cancel": "Reserve This Room!"}</button>
                 {this.state.reservation ? <DateReservation rooms={this.props.rooms} addToCart={this.props.addToCart} /> : null}
                 {/* <DateReservation /> */}
             </div>

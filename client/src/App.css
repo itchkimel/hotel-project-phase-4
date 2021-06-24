@@ -6,8 +6,10 @@ body {
 }
 
 .hotels img {
-  height: 500px;
-  width: 500px;
+  height: 435px;
+  width: 435px;
+  align-content: center;
+  border-radius: 10px;
 }
 
 .rooms img {
@@ -77,4 +79,44 @@ div.hotels {
     
   
 }
+
+div.rooms {
+  /* border-style:outset; */
+  border-radius: 20px;
+  border-width: 25px;
+  /* border-color: #FFF8E7; */
+  border: 1px solid #FFF8E7;
+  max-height:fit-content;
+  max-width:fit-content;
+  margin:auto;
+  width: 50%;
+  padding: 20px;
+  background-color: #528078;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+div.rooms img {
+  text-align: center;
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.user-resv {
+   /* border-style:outset; */
+   border-radius: 20px;
+   border-width: 25px;
+   /* border-color: #FFF8E7; */
+   border: 1px solid #FFF8E7;
+   max-height:fit-content;
+   max-width:fit-content;
+   margin:auto;
+   width: 50%;
+   padding: 20px;
+   background-color: #528078;
+   text-align: center;
+   margin-bottom: 50px;
+ }
+
+
 

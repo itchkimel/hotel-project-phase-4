@@ -31,6 +31,8 @@ class AccountLogin extends Component {
               window.location.href = "http://localhost:4000/signup";
             } else {
               this.props.loggedIn(res)
+              alert("Welcome Back")
+              this.setState({username: "", password: ""})
               // window.location.href = "http://localhost:4000/reservations";
             }
           })
@@ -62,7 +64,7 @@ class AccountLogin extends Component {
               onChange={this.handleChange}
             />
     
-            <input type="submit" value="Login" />
+            <input class="btn btn-primary mr-1" type="submit" value="Login" />
           </form>
         )
       }

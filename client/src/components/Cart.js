@@ -13,7 +13,7 @@ class Cart extends Component {
                 <h5>{this.props.guestRes.room.price}</h5> */}
 
                 {this.props.resvItems.map(resv => <CartCard resvItems={resv} />)}
-                <button onClick={this.props.handleResvPost}>Checkout</button>
+                <button class="btn btn-primary mr-1" onClick={this.props.handleResvPost}>Checkout</button>
             </div>
         );
     }

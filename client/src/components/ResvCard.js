@@ -16,10 +16,12 @@ class ResvCard extends Component {
                 <h5>Hotel: {beef[0].name}</h5>
                 <h5>Room: {beef1[0].room_type}</h5>
                 <img alt='room_image' src={beef1[0].image}/>
-                 {/* <h5>{this.props.resv.startDate}</h5>
-                <h5>{this.props.resv.endDate}</h5>
-                <h5>Price Per Night: ${this.props.resv.room.price}</h5>
-                <br></br> */}
+                <p></p>
+                <h6>Your stays:</h6>
+                 <h5>{this.props.resv.date_start} -</h5>
+                <h5>{this.props.resv.date_end}</h5>
+                {/* <h5>Price Per Night: ${this.props.resv.room.price}</h5> */}
+                <br></br>
             </div>
         );
     }

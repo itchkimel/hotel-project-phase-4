@@ -17,7 +17,7 @@ class NavBar extends Component {
                 <br></br>
                 <Link to="/login" ><i class="fa fa-user icon-user lnr lnr-user ion-ios-contact-outline"></i> Login</Link>  
                 <br></br>
-                <Link to="/reservations" > <i class="fa fa-calendar-alt icon-calendar lnr lnr-calendar-full ion-ios-calendar-outline"></i> Reservations</Link>           
+                <Link to="/reservations" > <i class="fa fa-calendar-alt icon-calendar lnr lnr-calendar-full ion-ios-calendar-outline"></i> Your Reservations</Link>           
                  <br></br>
                  
                
