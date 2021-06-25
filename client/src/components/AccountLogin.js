@@ -33,7 +33,8 @@ class AccountLogin extends Component {
               this.props.loggedIn(res)
               alert("Welcome Back")
               this.setState({username: "", password: ""})
-              // window.location.href = "http://localhost:4000/reservations";
+              this.props.routerProps.history.push("/hotels");
+
             }
           })
 

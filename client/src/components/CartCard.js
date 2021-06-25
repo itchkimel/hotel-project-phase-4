@@ -7,7 +7,6 @@ class CartCard extends Component {
 
 
     render() {
-        console.log(this.props.resvItems.startDate - this.props.resvItems.endDate)
         
         return (
             <div className="cart">

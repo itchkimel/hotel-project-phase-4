@@ -8,7 +8,7 @@ class Reservations extends Component {
         console.log(this.props)
         return (
             <div>
-               {this.props.currentUser.reservations.map(resv => <ResvCard hotels={this.props.hotels} resv={resv}/>)}
+               {this.props.currentUserResv.map(resv => <ResvCard hotels={this.props.hotels} resv={resv} handleResvDelete={this.props.handleResvDelete}/>)}
             </div>
         );
     }

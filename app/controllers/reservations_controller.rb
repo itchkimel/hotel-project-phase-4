@@ -16,6 +16,18 @@ class ReservationsController < ApplicationController
         end
     end
 
+    def destroy
+        resv = Reservation.find_by(id: params[:id])
+        if resv
+          resv.destroy
+          render json: {message: "Content deleted"}
+        else
+          render json: {error: "Reservation not found"}, status: 404
+        end
+      end
+
+
+
     private
 
     def resv_params
