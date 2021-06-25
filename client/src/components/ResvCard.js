@@ -11,7 +11,7 @@ class ResvCard extends Component {
 
     return (
       <div className="user-resv">
-        <h5>Hotel: {beef[0].name}</h5>
+        <h5>{beef[0].name}</h5>
         <h5>Room: {beef1[0].room_type}</h5>
         <img alt="room_image" src={beef1[0].image} />
         <p></p>

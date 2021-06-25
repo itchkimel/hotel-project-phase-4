@@ -15,7 +15,6 @@ export default class App extends Component {
     currentUser: "",
     currentUserResv: [],
     resvItems: [],
-    // userResv: [],
     loggedIn: false,
   };
 
@@ -25,14 +24,6 @@ export default class App extends Component {
       .then((hotelsArr) => this.setState({ hotels: hotelsArr }));
     console.log("mounted");
   }
-
-  // handleLogin = (currentUser) => {
-  //   // set current user (then redirect to home page)
-  //   this.setState({ currentUser }, () => {
-  //     // this is where we will redirect
-  //     // this.props.history.push('/home')
-  //   });
-  // };
 
   addToCart = (resvObj) => {
     this.setState({ resvItems: [...this.state.resvItems, resvObj] });
@@ -85,26 +76,25 @@ export default class App extends Component {
     console.log(resvDelete);
     console.log(this.state.currentUser);
     // debugger
-    let userResvNew = this.state.currentUserResv.filter(resv => resv.id !== resvDelete)
+    let userResvNew = this.state.currentUserResv.filter(
+      (resv) => resv.id !== resvDelete
+    );
     console.log(userResvNew);
     fetch(`http://localhost:3000/reservations/${resvDelete}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
       .then((r) => {
-        console.log("in the response", r)
+        console.log("in the response", r);
         this.setState({
-          currentUserResv: userResvNew
-        })
-        alert("Reservation has been canceled.")
-        // window.location.href = "http://localhost:4000/hotels";
-      }
-    );
+          currentUserResv: userResvNew,
+        });
+        alert("Reservation has been canceled.");
+      });
   };
 
   render() {
-    // console.log(this.state.resvItems)
-    console.log(this.state.currentUserResv)
+    console.log(this.state.currentUserResv);
 
     return (
       <Router>
@@ -144,6 +134,7 @@ export default class App extends Component {
             <HotelContainer
               hotels={this.state.hotels}
               addToCart={this.addToCart}
+              loggedIn={this.state.loggedIn}
             />
           </Route>
         </Switch>

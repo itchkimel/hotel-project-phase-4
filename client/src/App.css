@@ -1,21 +1,21 @@
 body {
   background-image: url(https://47ulw640o9fpqq4la1v9y43r-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/iStock-995624510-3000x1500.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .hotels img {
-  height: 435px;
-  width: 435px;
+  height: 500px;
+  width: 600px;
   align-content: center;
   border-radius: 10px;
 }
 
-.rooms img {
-  height: 250px;
-  width: 400px;
-}
+/* .rooms img {
+  height: 300px;
+  width: 450px;
+} */
 
 div.user-resv img {
   height: 150px;
@@ -23,7 +23,7 @@ div.user-resv img {
 }
 
 form {
-  background-color: #FFF8E7;
+  background-color: #fff8e7;
   border: 1px solid #528078;
   display: flex;
   flex-direction: column;
@@ -48,36 +48,27 @@ form img {
 div.links a {
   color: #44726a;
   position: fixed;
-  font-size: 17px;
+  font-size: 30px;
   text-shadow: -1px 0 #f7ecd4, 0 1px #f7ecd4, 1px 0 #f7ecd4, 0 -1px #f7ecd4;
   /* background-color: grey; */
   /* text-align: right; */
-  
-  
+  /* padding: 10px */
 }
 
-
-
-
-
-
 div.hotels {
-  
-    /* border-style:outset; */
-    border-radius: 20px;
-    border-width: 25px;
-    /* border-color: #FFF8E7; */
-    border: 1px solid #FFF8E7;
-    max-height:fit-content;
-    max-width:550px;
-    margin:auto;
-    width: 50%;
-    padding: 20px;
-    background-color: #528078;
-    text-align: center;
-    margin-bottom: 50px
-    
-  
+  /* border-style:outset; */
+  border-radius: 20px;
+  border-width: 25px;
+  /* border-color: #FFF8E7; */
+  border: 1px solid #fff8e7;
+  max-height: fit-content;
+  /* max-width: 550px; */
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+  background-color: #528078;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 div.rooms {
@@ -85,10 +76,10 @@ div.rooms {
   border-radius: 20px;
   border-width: 25px;
   /* border-color: #FFF8E7; */
-  border: 1px solid #FFF8E7;
-  max-height:fit-content;
-  max-width:fit-content;
-  margin:auto;
+  border: 1px solid #fff8e7;
+  max-height: fit-content;
+  max-width: fit-content;
+  margin: auto;
   width: 50%;
   padding: 20px;
   background-color: #528078;
@@ -98,25 +89,47 @@ div.rooms {
 
 div.rooms img {
   text-align: center;
-  max-width: 150px;
-  max-height: 100px;
+  max-width: 250px;
+  max-height: 175px;
 }
 
 .user-resv {
-   /* border-style:outset; */
-   border-radius: 20px;
-   border-width: 25px;
-   /* border-color: #FFF8E7; */
-   border: 1px solid #FFF8E7;
-   max-height:fit-content;
-   max-width:fit-content;
-   margin:auto;
-   width: 50%;
-   padding: 20px;
-   background-color: #528078;
-   text-align: center;
-   margin-bottom: 50px;
- }
+  /* border-style:outset; */
+  border-radius: 20px;
+  border-width: 25px;
+  /* border-color: #FFF8E7; */
+  border: 1px solid #fff8e7;
+  max-height: fit-content;
+  max-width: fit-content;
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  background-color: #528078;
+  text-align: center;
+  margin-bottom: 50px;
+}
 
+.cart {
+  /* border-style:outset; */
+  border-radius: 20px;
+  border-width: 25px;
+  /* border-color: #FFF8E7; */
+  border: 1px solid #fff8e7;
+  max-height: fit-content;
+  /* max-width:550px; */
+  margin: auto;
+  width: 250px;
+  padding: 20px;
+  /* text-align: center; */
+  background-color: #528078;
+  margin-bottom: 50px;
+}
 
+.cart img {
+  height: 150px;
+  width: 200px;
+}
 
+.rooms h5 {
+  color: #fff8e7
+}

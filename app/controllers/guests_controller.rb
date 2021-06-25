@@ -7,14 +7,9 @@ class GuestsController < ApplicationController
             guest.save
             render json: guest, status: 201
         else
-            render json: {errors: guest.errors.full_messages}, status: 422
+            render json: {error: guest.errors.full_messages}, status: 422
         end
     end
-
-    # def index
-    #     guests = Guest.all
-    #     render json: guests
-    # end
 
     def show
         guest = Guest.find_by(id: params[:id])
